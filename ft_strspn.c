@@ -1,51 +1,21 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strspn.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: sholiak <sholiak@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/18 20:04:50 by sholiak           #+#    #+#             */
-/*   Updated: 2019/06/22 14:07:28 by sholiak          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <string.h>
 
-int ft_strspn(const char *str, const char *part)
+size_t  ft_strspn(const char *s, const char *accept)
 {
     int i = 0;
-    int j = 0;
-    int check = 0;
+    int j;
 
-    while (str[i])
+    while(s[i])
     {
-        if (str[i] == part[j])
+        j = 0;
+        while (accept[j] && accept[j] != s[i])
         {
-            i++;
-            check++;
             j++;
         }
-        if (str[i] != part[j] && part[j] != '\0')
-            j++;
-        if (check == 0 && part[j] == '\0')
-            return (i);
-        if (part[j] == '\0' && check != 0)
-        {
-            j = 0;
-            check = 0;
-        }
+        if (accept[j] == s[i])
+        i++;
+        else
+        return(i);
     }
-    return (i);
-}
-
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-    int len = 0;
-    int mylen = 0;
-    len = strspn("hey how are you", "hey");
-    mylen = ft_strspn("hey how are you", "hey");
-    printf("strspn :%d\n", len);
-    printf("My_strspn :%d\n", mylen);
+    return(i);
 }
