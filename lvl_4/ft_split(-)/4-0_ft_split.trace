@@ -1,0 +1,88 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r8p2.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Mon Aug 19 16:11:35 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/practice-exam_20190819/sholiak
+
+= Git history ==================================================================
+$> git -C /var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user log --pretty='%H - %an, %ad : %s'
+f6851f976dbc9c84c168387d39f463f3ecdeb2db - Serhii Holiak, Mon Aug 19 16:11:20 2019 -0700 : +
+659475c303e47069003e531ca9b7352fcd28d249 - Serhii Holiak, Mon Aug 19 15:16:51 2019 -0700 : +
+a975fd8531f2515dd365c00dfd9eb5de8649f6bb - Serhii Holiak, Mon Aug 19 15:04:02 2019 -0700 : +
+e9a16997ea27872e4cb6e719ca54375fc249f1f9 - Serhii Holiak, Mon Aug 19 13:47:39 2019 -0700 : +
+ddd90f85329bc32411aa47f8c899a83684dc9de9 - Serhii Holiak, Mon Aug 19 13:43:14 2019 -0700 : +
+15e12e5a2cdc251b0dd2d336c3cac27f80e49475 - Serhii Holiak, Mon Aug 19 13:34:57 2019 -0700 : +
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1427 Aug 19 16:11 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 expand_str
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 first_word
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 ft_atoi_base
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 ft_split
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 ft_strrev
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 16:11 maff_revalpha
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/expand_str:
+total 8
+-rw-r--r--  1 deepthought  deepthought  621 Aug 19 16:11 expand_str.c
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/first_word:
+total 8
+-rw-r--r--  1 deepthought  deepthought  353 Aug 19 16:11 first_word.c
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/ft_atoi_base:
+total 8
+-rw-r--r--  1 deepthought  deepthought  447 Aug 19 16:11 ft_atoi_base.c
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/ft_split:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1129 Aug 19 16:11 ft_split.c
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/ft_strrev:
+total 8
+-rw-r--r--  1 deepthought  deepthought  272 Aug 19 16:11 ft_strrev.c
+
+/var/folders/t1/nkxbls953v5959zj11qvkqg00000gp/T/tmp2sV9g1/user/maff_revalpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  85 Aug 19 16:11 maff_revalpha.c
+ 
+= ft_split =====================================================================
+$> gcc -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./fihnivxpsiz7o71lanpsctdp ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./ku01kv7b2c990x675mcs7wp7 "	 	 
+ 	 
+ "
+$> diff -U 3 user_output_test2 test2.output | cat -e
+--- user_output_test2	2019-08-19 16:11:37.000000000 -0700$
++++ test2.output	2019-08-19 16:11:37.000000000 -0700$
+@@ -1 +0,0 @@$
+-$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
